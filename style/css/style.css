@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-font-primary-black: #000;
+    --color-font-primary-white: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+
+a, p {
+    text-decoration: none;
+    color: var(--color-font-primary-black);
+    margin: 0;
+}
+
+#globalheader {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+}
+
+.header {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+#globalheader .logo {
+    flex: 1 1;
+    padding: 0;
+}
+
+#globalheader .logo > i {
+    display: none;
+}
+
+#globalheader a{
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+#globalheader a > p{
+    font-weight: 700;
+}
+
+#globalheader .logo > a > img {
+    height: 38px;
+    border-radius: 8px;
+}
+
+#globalheader .search {
+    position: relative;
+    justify-content: center;
+    flex: 1 1;
+}
+
+#globalheader .search > i {
+    font-size: 22px;
+    position: absolute;
+    top: 30%;
+    left: 16%;
+    color: #b4b4b4;
+    padding: 0;
+}
+
+#globalheader .search > input {
+    padding: 8px 8px 8px 50px;
+    max-width: 400px;
+    min-width: 200px;
+    width: 100%;
+    border-radius: 9999px;
+    border: 1px solid #e8e8e8;
+}
+
+#globalheader .search > input:focus {
+    color: var(--color-font-primary-black);
+    font-weight: 500;
+    border: 1px solid #555;
+    outline: none
+}
+
+#globalheader .login {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex: 1 1;
+    padding: 0;
+}
+
+#globalheader .login .login-button {
+    padding: 8px;
+    width: 100%;
+    max-width: 100px;
+    border: none;
+    background-color: transparent;
+    color: var(--color-font-primary-black);
+    font-weight: 700;
+}
+
+#globalheader .login .register-button {
+    padding: 8px;
+    width: 100%;
+    max-width: 100px;
+    border: none;
+    background-color: #ff661b;
+    color: var(--color-font-primary-white);
+    border-radius: 9999px;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 0;
+    gap: 8px;
+}
+
+#aside {
+    display: flex;
+    flex-direction: column;
+    /* gap: 4px; */
+    flex-basis: 100px;
+    height: 100vh;
+    width: 96px;
+}
+
+#aside .item {
+    max-width: 80px;
+    width: 100%;
+    flex: 0 0 72px;
+    align-items: center;
+    margin: 8px;
+    padding: 0;
+    height: 200px;
+    transition: 0.8s ease all;
+}
+
+#aside .item > a {
+    flex-basis: 0px;
+    padding: 12px;
+    gap: 12px;
+    text-align: center;
+}
+
+#aside .item:hover {
+    background-color: #f5f6f7;
+    border-radius: 8px;
+    /* padding: 8px; */
+    transition: 0.8s ease all;
+}
+
+#aside .item.active{
+    background-color: #e8ebed;
+    border-radius: 8px;
+    /* padding: 8px; */
+}
+
+.item > a > i {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-font-primary-black);
+}
+
+.item > a > p {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-font-primary-black);
+}
+
+.content {
+    width: 100%;
+    padding: 0 16px;
+}
+
+.content .banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.content .banner .item > a > img {
+    max-width: 100%;
+    width: 1920px;
+    height: 300px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+@media (max-width: 1540px){
+    #globalheader .search > i {
+        font-size: 22px;
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        color: #b4b4b4;
+        padding: 0;
+    }
+}
+
+
+@media (max-width: 1200px){
+    #globalheader .search > i {
+        font-size: 22px;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        color: #b4b4b4;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 750px){
+    #globalheader .search {
+        height: 48px;
+        max-width: 130px;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #globalheader .search > input {
+        display: none;
+    }
+
+    #globalheader .search > i {
+        transition: all 0.2 ease;
+        top: 30%;
+        left: 90%;
+    }
+
+    #globalheader .login .login-button {
+        display: none;
+    }
+
+    #globalheader .logo > a{
+        display: none;
+    }
+
+    #globalheader .logo > i {
+        transition: all 0.2 ease;
+        display: block;
+        font-size: 30px;
+        color: #b4b4b4;
+    }
+}
+
